@@ -79,7 +79,7 @@ Training LGESQL models with GLOVE, BERT and ELECTRA respectively:
 
 ## Evaluation and submission
 
-1. Create the directory `saved_models`, save the trained model and its configuration (at least containing `model.bin` and `params.json`) into a new directory under `saved_models`, e.g. `saved_models/electra-msde-75.1/`.
+1. Create the directory `saved_models`, save the trained model and its configuration (at least containing `model.bin` and `params.json`) into a new directory under `saved_models`, e.g. `saved_models/electra-mmc-66.4/`. The `model.bin` and `params.json` shows in the training log, please check the log to get it. 
 
 2. For evaluation, see `.\run\windows\run_evaluation.bat` and `.\run\windows\run_submission.bat` (eval from scratch) for reference.
 
