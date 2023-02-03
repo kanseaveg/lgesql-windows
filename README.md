@@ -42,6 +42,7 @@ This is the project containing source code for the paper [*LGESQL: Line Graph En
         python -c "import stanza; stanza.download('en')"
         python -c "import os; os.environ['HOME']=os.environ['HOMEPATH'];from embeddings import GloveEmbedding; emb = GloveEmbedding('common_crawl_48', d_emb=300)"
         python -c "import nltk; nltk.download('stopwords')"
+        python -c "import nltk; nltk.download('punkt')"
 
 3. Download pre-trained language models from [`Hugging Face Model Hub`](https://huggingface.co/models), such as `bert-large-whole-word-masking` and `electra-large-discriminator`, into the `pretrained_models` directory. The vocab file for [`glove.42B.300d`](http://nlp.stanford.edu/data/glove.42B.300d.zip) is also pulled: (please ensure that `Git LFS` is installed)
 
