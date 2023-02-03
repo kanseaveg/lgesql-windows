@@ -120,8 +120,8 @@ class Evaluator():
             ref_sql = self.transition_system.ast_to_surface_code(ref, db)
             pred_sqls.append(pred_sql)
             ref_sqls.append(ref_sql)
-        with tempfile.NamedTemporaryFile('w+t', encoding='utf8', suffix='.sql') as tmp_pred, \
-                tempfile.NamedTemporaryFile('w+t', encoding='utf8', suffix='.sql') as tmp_ref:
+        with tempfile.NamedTemporaryFile('w+t', encoding='utf8', suffix='.sql', delete=False) as tmp_pred, \
+                tempfile.NamedTemporaryFile('w+t', encoding='utf8', suffix='.sql', delete=False) as tmp_ref:
             of = open(output_path, 'w', encoding='utf8') if output_path is not None \
                 else tempfile.TemporaryFile('w+t')
             # write pred and ref sqls
@@ -150,8 +150,8 @@ class Evaluator():
                 best_ast = hyp[0].tree # by default, the top beam prediction
                 pred_sql = self.transition_system.ast_to_surface_code(best_ast, dbs[idx])
             pred_sqls.append(pred_sql)
-        with tempfile.NamedTemporaryFile('w+t', encoding='utf8', suffix='.sql') as tmp_pred, \
-            tempfile.NamedTemporaryFile('w+t', encoding='utf8', suffix='.sql') as tmp_ref:
+        with tempfile.NamedTemporaryFile('w+t', encoding='utf8', suffix='.sql', delete=False) as tmp_pred, \
+            tempfile.NamedTemporaryFile('w+t', encoding='utf8', suffix='.sql', delete=False) as tmp_ref:
             of = open(output_path, 'w', encoding='utf8') if output_path is not None \
                 else tempfile.TemporaryFile('w+t')
             # write pred and ref sqls

@@ -1,4 +1,5 @@
-dgl-cu101==0.5.3
+dgl-cu110==0.6.1
+protobuf==3.20.0
 embeddings==0.0.8
 transformers==3.5.1
 stanza==1.1.1

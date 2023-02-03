@@ -3,12 +3,18 @@
 set task=lgesql_glove
 set seed=999
 set device=0
-::'--testing'
-set testing=
-set read_model_path=
+::training阶段使用参数
+::set testing=
+::set read_model_path=
+
+::testing阶段使用参数
+set testing=--testing
+set read_model_path=--read_model_path .\save_models\glove-mmc-63.5\
+
+
 
 set model=lgesql
-:: without_pruning  是否使用剪枝辅助工作以便提高encoder的识别能力
+:: without_pruning|with_pruning  是否使用剪枝辅助工作以便提高encoder的识别能力
 set output_model=with_pruning
 :: mmc, msde, local   mmc:multi-head multi-view concatenation   msde: mixed static and dynamic embeddings 两种拆分头的方法
 set local_and_nonlocal=%1
@@ -39,7 +45,7 @@ set no_parent_field_type_embed=
 set no_parent_state=
 
 ::set batch_size=20 如果你爆显存了 请将batch_size调低
-set batch_size=15
+set batch_size=10
 set grad_accumulate=2
 set lr=5e-4
 set l2=1e-4

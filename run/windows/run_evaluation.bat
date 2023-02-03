@@ -1,5 +1,5 @@
 set task=evaluation
-set read_model_path=saved_models/%1
+set read_model_path=saved_models\%1
 set batch_size=20
 set beam_size=5
 set device=0
