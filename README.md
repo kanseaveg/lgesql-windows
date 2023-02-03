@@ -96,6 +96,12 @@ Dev and test **EXACT MATCH ACC** in the official [leaderboard](https://yale-lily
 | LGESQL + BERT | 74.1 | 68.3 |
 | LGESQL + ELECTRA | 75.1 | 72.0 |
 
+## For Chinese Noob 
+You can lookup the ```Windows-LGESQL-Glove-Tutorial.pdf``` on the resources directory. 
+
+
 ## Acknowledgements
 
 We would like to thank Tao Yu, Yusen Zhang and Bo Pang for running evaluations on our submitted models. We are also grateful to the flexible semantic parser [TranX](https://github.com/pcyin/tranX) that inspires our works. Also, for this fork respository, thanks to DMIRLAB.
+
+
